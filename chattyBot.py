@@ -21,7 +21,8 @@ shell = True
 
 def speak(this):
     print('- '+str(this))
-    subprocess.run(['flite', '-voice', 'file://cmu_us_aew.flitevox', '-t', str(this)])
+    subprocess.run(['say', str(this)])
+    #mac內建語音不用flite
 
 speak('I\'m listening')
 var = input('> ')
